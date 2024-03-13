@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="css/issadate.css" />
+  </head>
+  <body>
+    <div id="valentineQuestion"><b>Would you like to be my date? </b></div>
+    <p>After the examination, I was hoping we could celebrate together, my chaa. Would you like to?</p>
+    <button class="answerButton" onclick="location.href='thankyou.html'">
+      Yes
+    </button>
+    <button class="answerButton" id="noButton">I dont wanaa no no no</button>
+    <br />
+    <img src="pweelse.gif" alt="cat asking question" class="responsive" />
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  </body>
+</html>
